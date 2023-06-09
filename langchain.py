@@ -8,7 +8,7 @@ openai.api_key_path = 'api_key.text'
 
 load_dotenv()
  
-# API configuratio
+# API configuration
 openai.api_key = os.getenv(openai.api_key_path)
  
 # for LangChain
