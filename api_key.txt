@@ -1,1 +1,0 @@
-api_key = 'test if the gitignore is working like it should be 2'
