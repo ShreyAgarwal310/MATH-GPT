@@ -4,20 +4,28 @@ from dateutil.relativedelta import relativedelta
 import os
 from langchain.llms import OpenAI
 from dotenv import load_dotenv
-openai.api_key_path = 'api_key.text'
+
+def get_file_contents(filename):
+    try:
+        with open(filename, 'r') as f:
+            return f.read().strip()
+    except FileNotFoundError:
+        print("'%s' file not found" % filename)
+
+api_key = get_file_contents('api_key.txt')
 
 load_dotenv()
- 
+
 # API configuration
-openai.api_key = os.getenv(openai.api_key_path)
- 
+openai.api_key = os.getenv(api_key)
+
 # for LangChain
-os.environ[openai.api_key_path] = os.getenv(openai.api_key_path)
+os.environ[api_key] = os.getenv(api_key)
 
 llm = OpenAI(model_name='text-davinci-003', temperature=0)
 
 question = "Today is 27 February 2023. I was born exactly 25 years ago. What is the date I was born in MM/DD/YYYY?"
-
+ 
 DATE_UNDERSTANDING_PROMPT = """
 # Q: 2015 is coming in 36 hours. What is the date one week from today in MM/DD/YYYY?
 # If 2015 is coming in 36 hours, then today is 36 hours before.
@@ -66,3 +74,4 @@ llm_out = llm(DATE_UNDERSTANDING_PROMPT.format(question=question))
 print(llm_out)
 
 exec(llm_out)
+print(born)
