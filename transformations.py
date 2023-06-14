@@ -2,7 +2,7 @@ import numpy as np
 import random
 
 def write_float (self, value):
-    precision = self.float_precision # significant digs - 1
+    precision = self.float_precision # sig figs - 1
     m, e = (f"%.{precision}e" % np.abs(value)) .split("e")
     i, f = m.split (".")
     i = i + f

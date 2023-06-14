@@ -16,8 +16,10 @@ api_key = get_file_contents('api_key.txt')
 
 load_dotenv()
 
+print(api_key)
 # API configuration
 openai.api_key = os.getenv(api_key)
+print(openai.api_key)
 
 # for LangChain
 os.environ[api_key] = os.getenv(api_key)

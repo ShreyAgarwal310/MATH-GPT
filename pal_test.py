@@ -1,7 +1,7 @@
 import pal
 from pal.prompt import math_prompts
 
-interface = pal.interface.ProgramInterface(
+interface = pal.ProgramInterface(
   model='code-davinci-002',
   stop='\n\n\n', # stop generation str for Codex API
   get_answer_expr='solution()' # python expression evaluated after generated code to obtain answer 
