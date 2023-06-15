@@ -63,8 +63,8 @@ today = datetime(2002, 3, 12)
 later = today + relativedelta(hours=24)
 # The answer formatted with %m/%d/%Y is
 later.strftime('%m/%d/%Y')
-# Q: Jane was born on the last day of Feburary in 2001. Today is her 16-year-old birthday. What is the date yesterday in MM/DD/YYYY?
-# If Jane was born on the last day of Feburary in 2001 and today is her 16-year-old birthday, then today is 16 years later.
+# Q: Jane was born on the last day of February in 2001. Today is her 16-year-old birthday. What is the date yesterday in MM/DD/YYYY?
+# If Jane was born on the last day of February in 2001 and today is her 16-year-old birthday, then today is 16 years later.
 today = datetime(2001, 2, 28) + relativedelta(years=16)
 # Yesterday,
 yesterday = today - relativedelta(days=1)
