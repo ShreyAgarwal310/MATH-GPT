@@ -28,7 +28,9 @@ interface = pal.interface.ProgramInterface(
 
 # print(solution())
 
-question = 'The bakers at the Beverly Hills Bakery baked 200 loaves of bread on Monday morning. They sold 93 loaves in the morning and 39 loaves in the afternoon. A grocery store returned 6 unsold loaves. How many loaves of bread did they have?'
+question = 'Bob says to Alice: if you give me 3 apples and then take half of my apples away, then I will be left with 13 apples. How many apples do I have now?'
+question = input("Enter a mathematical expression: ")
+
 prompt = math_prompts.MATH_PROMPT.format(question=question)
 answer = interface.run(prompt)
 print(answer)
