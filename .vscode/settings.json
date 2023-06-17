@@ -1,8 +1,0 @@
-{
-    "python.analysis.extraPaths": [
-        "./pal"
-    ],
-    "cSpell.words": [
-        "openai"
-    ]
-}
