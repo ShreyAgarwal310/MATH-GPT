@@ -9,7 +9,17 @@ Let b be how many apples she had in the morning after eating 2 apples [[var b]].
 Let c be the apples she bought in the afternoon [[var c]]. 
 Since she bought as many as she had after eating, we have [[eq c = b]]. 
 Let d be how many apples she ended up with [[var d]]. We have [[eq d = b + c]]. 
-The answer is the value of d [[answer d]]. 
+The answer is the value of d [[answer d]].
+
+Q: Bob says to Alice: if you give me 3 apples and then take half of my apples away, then I will be left with 13 apples. How many apples do I have now?
+
+Peano solution:
+
+Let a be the number of apples Bob would end with [[var a]]. We have [[eq a = 13]]
+Let b be how many apples Bob has before Alice took half his apples away [[var b]]. We have [[eq b = a * 2]]
+Let c be the number of apples Bob has at the very beginning [[var c]].
+Since Alice gave Bob three apples, we have [[eq c = b - 3]]
+The answer is the value of c [[answer c]].
 
 
 

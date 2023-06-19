@@ -8,7 +8,13 @@ Peano solution:
 [[answer a]]
 
 
+Q: Bob says to Alice: if you give me 3 apples and then take half of my apples away, then I will be left with 13 apples. How many apples do I have now?
 
+Peano solution:
+
+
+[[eq a = (13 * 2) - 3]]
+[[answer a]]
 
 
 Q: Mario and Luigi together had 10 years of experience in soccer. Luigi had 3 more than Mario. How many did Mario have?
