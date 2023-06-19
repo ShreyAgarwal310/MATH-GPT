@@ -70,7 +70,7 @@ Q: Tom paid $1166.40 for a new refrigerator, including $86.40 tax. What was the 
 
 Peano solution:
 
-Let a be the price Tom paid for the new refrigerator [[var a]]. We have [[eq a = 11660.40]]
+Let a be the price Tom paid for the new refrigerator [[var a]]. We have [[eq a = 1660.40]]
 Let b be the sales tax Tom paid for the refrigerator [[var b]]. We have [[eq b = 86.40]]
 Let c be the price of the refrigerator [[var c]]. We have [[eq c = a - b]]
 The answer is the value of c [[answer c]].
@@ -84,11 +84,23 @@ Let b be the price for an adult ticket [[var b]]. We have [[eq b = 9]].
 Let c be the total value of tickets sold [[var c]]. We have [[eq c = 1506]].
 Let d be the number of student tickets sold [[var d]].
 Let e be the number of adult tickets sold [[var e]].
-Because the total value of tickets sold was $1506, we have the equation [[eq 6 * d + 9 * e = 1506]].
+Because the total value of tickets sold was $1506, we have the equation [[eq a * d + b * e = 1506]].
 Because the number of adult tickets sold was five less than three times the number of student tickets sold, we have the equation [[eq e = 3 * d - 5]].
 Substituting the two equations, we have [[eq 33 * d = 1551]].
 The answer is the value of d [[answer d]].
 
+Q: Monica paid $8.36 for stamps. The number of 41-cent stamps was four more than twice the number of two-cent stamps. How many 41-cent stamps did Monica buy?
+
+Peano solution:
+
+Let a be the total price of the stamps [[var a]]. We have [[eq a = 8.36]]
+Let b be the value of a 41-cent stamp [[var b]]. We have [[eq b = 0.41]]
+Let c be the value of a two-cent stamp [[var c]]. We have [[eq c = 0.02]]
+Let d be the number of 41-cent stamps [[var d]].
+Let e be the number of two-cent stamps [[var e]].
+Because the total value of the stamps  was $8.36, we have the equation [[eq b * d + c * e = 8.36]].
+Because the number of 41-cent stamps is four more than twice the number of two-cent stamps, we have the equation [[eq d = 2 * e + 4]].
+The answer is the value of d [[answer d]].
 
 Q: Mary had 5 apples. The next morning, she ate 2 apples. Then, in the afternoon, she bought as many apples as she had after eating those apples in the morning. How many apples did she end up with?
 
