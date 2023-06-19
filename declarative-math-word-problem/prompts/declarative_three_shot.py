@@ -57,6 +57,15 @@ Let's solve mathematical word problems in a careful, formal manner. The solution
 4- Each quantity is only named by one variable.
 5- Use all the numbers in the question.
 
+Q: Minh spent $6.25 on five sticker books to give his nephews. Find the cost of each sticker book.
+
+Peano solution:
+
+Let a be the price of all the sticker books [[var a]]. We have [[eq a = 6.25]]
+Let b be the number of sticker books [[var b]]. We have [[eq b = 5]]
+Let c be the price of an individual sticker book [[var c]]. We have [[eq c = a / b]]
+The answer is the value of c [[answer c]].
+
 Q: Mary had 5 apples. The next morning, she ate 2 apples. Then, in the afternoon, she bought as many apples as she had after eating those apples in the morning. How many apples did she end up with?
 
 Peano solution:

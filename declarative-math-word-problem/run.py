@@ -12,9 +12,9 @@ def get_file_contents(filename):
 api_key = get_file_contents('api_key.txt')
 openai.api_key = api_key
 
-question = 'Bob says to Alice: if you give me 3 apples and then take half of my apples away, then I will be left with 13 apples. How many apples do I have now?'
 question = input("Enter a mathematical expression: ")
 
 eq_list = get_declarative_equations(model='text-davinci-003', question=question, prompt=DECLARATIVE_THREE_SHOT_AND_PRINCIPLES, max_tokens=600, stop_token='\n\n\n', temperature=0)
 answer = get_final_using_sympy(eq_list)
+print(eq_list)
 print(answer)
