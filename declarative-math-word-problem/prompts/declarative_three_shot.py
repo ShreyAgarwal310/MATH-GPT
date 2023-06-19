@@ -86,7 +86,6 @@ Let d be the number of student tickets sold [[var d]].
 Let e be the number of adult tickets sold [[var e]].
 Because the total value of tickets sold was $1506, we have the equation [[eq a * d + b * e = 1506]].
 Because the number of adult tickets sold was five less than three times the number of student tickets sold, we have the equation [[eq e = 3 * d - 5]].
-Substituting the two equations, we have [[eq 33 * d = 1551]].
 The answer is the value of d [[answer d]].
 
 Q: Monica paid $8.36 for stamps. The number of 41-cent stamps was four more than twice the number of two-cent stamps. How many 41-cent stamps did Monica buy?
@@ -101,6 +100,30 @@ Let e be the number of two-cent stamps [[var e]].
 Because the total value of the stamps  was $8.36, we have the equation [[eq b * d + c * e = 8.36]].
 Because the number of 41-cent stamps is four more than twice the number of two-cent stamps, we have the equation [[eq d = 2 * e + 4]].
 The answer is the value of d [[answer d]].
+
+Q: Henning is mixing raisins and nuts to make 10 pounds of trail mix. Raisins cost $2 a pound and nuts cost $6 a pound. If Henning wants his cost for the trail mix to be $5.20 a pound, how many pounds of raisins should he use?
+
+Peano solution:
+
+Let a be the total weight of the trail mix [[var a]]. We have [[eq a = 10]]
+Let b be the cost of one pound of raisin [[var b]]. We have [[eq b = 2]]
+Let c be the cost of one pound of nuts [[var c]]. We have [[eq c = 6]]
+Let d be the pounds of raisins [[var d]].
+Let e be the pounds of nuts [[var e]].
+Because Henning wants his price per pound to be 5.2, we have [[eq b * d + c * e = a * 5.2]]
+Because Henning wants 10 pounds of trail mix, we have [[eq d + e = 10]]
+The answer is the value of d [[answer d]].
+
+Q: When Gabe drives from Sacramento to Redding it takes him 2.2 hours. It takes Elsa 2 hours to drive the same distance. Elsa’s speed is seven miles per hour faster than Gabe’s speed. Find Gabe’s speed, in miles per hour.
+
+Peano solution:
+
+Let a be the time it takes for Gabe to drive from Sacramento to Redding [[var a]]. We have [[eq a = 2.2]]
+Let b be the time it takes Else to drive from Sacramento to Redding [[var b]]. We have [[eq b = 2]]
+Let c be Gabe's speed [[var c]].
+Let d be Elsa's speed [[var d]]. We have [[eq d = c + 7]]
+Because they are traveling the same distance, we have [[eq a * c = b * d]].
+The answer is the value of c [[answer c]].
 
 Q: Mary had 5 apples. The next morning, she ate 2 apples. Then, in the afternoon, she bought as many apples as she had after eating those apples in the morning. How many apples did she end up with?
 
