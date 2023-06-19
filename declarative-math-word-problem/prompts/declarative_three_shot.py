@@ -66,6 +66,30 @@ Let b be the number of sticker books [[var b]]. We have [[eq b = 5]]
 Let c be the price of an individual sticker book [[var c]]. We have [[eq c = a / b]]
 The answer is the value of c [[answer c]].
 
+Q: Tom paid $1166.40 for a new refrigerator, including $86.40 tax. What was the price of the refrigerator?
+
+Peano solution:
+
+Let a be the price Tom paid for the new refrigerator [[var a]]. We have [[eq a = 11660.40]]
+Let b be the sales tax Tom paid for the refrigerator [[var b]]. We have [[eq b = 86.40]]
+Let c be the price of the refrigerator [[var c]]. We have [[eq c = a - b]]
+The answer is the value of c [[answer c]].
+
+Q: At a school concert, the total value of tickets sold was $1,506. Student tickets sold for $6 each and adult tickets sold for $9 each. The number of adult tickets sold was five less than three times the number of student tickets sold. How many student tickets were sold?
+
+Peano solution:
+
+Let a be the price for a student ticket [[var a]]. We have [[eq a = 6]].
+Let b be the price for an adult ticket [[var b]]. We have [[eq b = 9]].
+Let c be the total value of tickets sold [[var c]]. We have [[eq c = 1506]].
+Let d be the number of student tickets sold [[var d]].
+Let e be the number of adult tickets sold [[var e]].
+Because the total value of tickets sold was $1506, we have the equation [[eq 6 * d + 9 * e = 1506]].
+Because the number of adult tickets sold was five less than three times the number of student tickets sold, we have the equation [[eq e = 3 * d - 5]].
+Substituting the two equations, we have [[eq 33 * d = 1551]].
+The answer is the value of d [[answer d]].
+
+
 Q: Mary had 5 apples. The next morning, she ate 2 apples. Then, in the afternoon, she bought as many apples as she had after eating those apples in the morning. How many apples did she end up with?
 
 Peano solution:
