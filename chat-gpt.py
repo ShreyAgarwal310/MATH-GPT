@@ -37,3 +37,5 @@ generated_functions = [choice.text.strip() for choice in response_choices]
 # Print the generated functions
 for i, function in enumerate(generated_functions, start=1):
     print(f"Generated function {i}: {function}")
+
+#test
