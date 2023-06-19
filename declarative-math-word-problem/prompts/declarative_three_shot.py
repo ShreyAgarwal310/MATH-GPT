@@ -125,6 +125,33 @@ Let d be Elsa's speed [[var d]]. We have [[eq d = c + 7]]
 Because they are traveling the same distance, we have [[eq a * c = b * d]].
 The answer is the value of c [[answer c]].
 
+Q: When Jenna spent 10 minutes on the elliptical trainer and then did circuit training for 20 minutes, her fitness app says she burned 278 calories. When she spent 20 minutes on the elliptical trainer and 30 minutes circuit training she burned 473 calories. How many calories does she burn for each minute on the elliptical trainer?
+
+Peano solution:
+
+Let a be the time Jenna spent on the elliptical trainer during her first workout [[var a]]. We have [[eq a = 10]]
+Let b be the time Jenna spent on circuit training during her first workout [[var b]]. We have [[eq b = 20]]
+Let c be the calories Jenna burnt during her first workout [[var c]]. We have [[eq c = 278]]
+Let d be the time Jenna spent on the elliptical trainer during her second workout [[var d]]. We have [[eq d = 20]]
+Let e be the time Jenna spent on circuit training during her second workout [[var e]]. We have [[eq e = 30]]
+Let f be the calories Jenna burnt during her second workout [[var f]]. We have [[eq f = 473]]
+Let g be the number of calories Jenna burns each minute on the elliptical trainer. [[var g]].
+Let h be the number of calories Jenna burns each minute on circuit training. [[var h]].
+Because of Jenna's first workout, we have [[eq a * g + b * h = c]]
+Because of Jenna's second workout, we have [[eq d * g + e * h = f]]
+The answer is the value of g [[answer g]].
+
+Q: Joni left St. Louis on the interstate, driving west towards Denver at a speed of 65 miles per hour. Half an hour later, Kelly left St. Louis on the same route as Joni, driving 78 miles per hour. How many hours will it take Kelly to catch up to Joni?
+
+Peano solution:
+
+Let a be Joni's speed during the trip [[var a]]. We have [[eq a = 65]].
+Let b be Kelly's speed during the trip [[var b]]. We have [[eq b = 78]].
+Let c be the time Joni is driving until Kelly reaches her [[var c]].
+Let d be the time Kelly is driving until she catches up to Joni [[var d]]. [[eq d = c - 0.5]]
+Because they will have traveled the same distance once they catch up, we have [[eq a * c = b * d]].
+The answer is the value of d [[answer d]].
+
 Q: Mary had 5 apples. The next morning, she ate 2 apples. Then, in the afternoon, she bought as many apples as she had after eating those apples in the morning. How many apples did she end up with?
 
 Peano solution:
