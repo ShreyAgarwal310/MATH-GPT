@@ -152,6 +152,20 @@ Let d be the time Kelly is driving until she catches up to Joni [[var d]]. [[eq 
 Because they will have traveled the same distance once they catch up, we have [[eq a * c = b * d]].
 The answer is the value of d [[answer d]].
 
+Q: A river cruise ship sailed 60 miles downstream for 4 hours and then took 5 hours sailing upstream to return to the dock. Find the speed of the ship in still water, in miles per hour.
+
+Peano solution:
+
+Let a be distance the river cruise ship sailed in one direction [[var a]]. We have [[eq a = 60]].
+Let b be the time it took to sail downstream [[var b]]. We have [[eq b = 4]].
+Let c be the time it took to sail upstream [[var c]]. We have [[eq c = 5]].
+Let d be the speed of the ship in still water [[var d]].
+Let e be the speed of the current [[var e]].
+When the ship is going downstream, the current is added onto the speed, so we have [[eq b * (d + e) = a]].
+When the ship is going upstream, the current is subtracted from the speed, so we have [[eq c * (d - e) = a]].
+The answer is the value of d [[answer d]].
+
+
 Q: Mary had 5 apples. The next morning, she ate 2 apples. Then, in the afternoon, she bought as many apples as she had after eating those apples in the morning. How many apples did she end up with?
 
 Peano solution:
