@@ -214,6 +214,59 @@ Let c be the number of hours in half a revolution [[var c]]. We have [[eq c = b 
 The answer is the value of c [[answer c]].
 
 
+Q: The profit of ACME Corporation in the second quarter was 8.84 billion dollars, which was 1.3 times greater than the profit in the first quarter. What was ACME’s profit in the first quarter?
+
+Peano solution:
+
+Let a be the second quarter profit [[var a]]. We have [[eq a = 8.84]].
+Let b be the first quarter profit [[var b]]. We have [[eq b = a/1.3]].
+The answer is the value of b [[answer b]].
+
+
+Q: The number 330 is 120% of what number?
+
+Peano solution:
+
+Let a be the first number [[var a]]. 
+Let b be the second number [[var b]]. We have [[eq b = 330]].
+Let c be the percentage [[var c]]. We have [[eq c = 120/100]].
+We have [[eq b = a * c]]
+The answer is the value of a [[answer a]].
+
+
+Q: Kay and July are opening the incoming mail together, with the goal of processing 400 envelopes. Find how many hours they need to complete the task if Kay can process 15 envelopes per hour, and July can process 35 envelopes per hour.
+
+Peano solution:
+
+Let a be the number of envelopes Kay can process in an hour [[var a]]. [[eq a = 15]].
+Let b be the number of envelopes July can process in an hour [[var b]]. [[eq b = 35]].
+Let c be the number of hours [[var c]].
+We have [[eq 400 = (a + b) * c]].
+The answer is the value of c [[answer c]].
+
+
+Q: One morning Aristotle starts walking from Athens to Megara, and at the same time Socrates starts on a journey from Megara to Athens. Being younger, Aristotle is walking 1.8 times faster than Socrates. After a 5 hour journey, they meet somewhere in the middle of the way. Find the speed of Aristotle, in km per hour, if the total distance between Athens and Megara is 42 km.
+
+Peano solution:
+
+Let a be the speed of Socrates [[var a]].
+Let b be the speed of Aristotle [[var b]]. We have [[eq b = a * 1.8]].
+Let c be the time travelled [[var c]]. We have [[eq c = 5]].
+Let d be the distance traveled [[var d]]. We have [[eq d = 42]].
+We have [[eq (a + b) * c = d]]
+The answer is the value of b [[answer b]].
+
+Q: Eve typed up a 4050 word document over two and a half hours. Find Eve’s typing rate in words per minute.
+
+Peano solution:
+
+Let a be the number of hours [[var a]]. We have [[eq a = 2.5]].
+Let b be the number of minutes [[var b]]. We have [[eq b = a * 60]].
+Let c be the number of words [[var c]]. We have [[eq c = 4050]].
+Let d be the number of words per minute [[var d]]. We have [[eq d = c/b]].
+The answer is the value of d [[answer d]].
+
+
 
 
 
@@ -256,20 +309,6 @@ Peano solution:
 Let a be the number of years Mario had [[var a]]. 
 Let b be the number of years Luigi had [[var b]]. We have [[eq a + b = 10]]. We also have [[eq b = a + 3]]. 
 The answer is the value of a [[answer a = 3.5]].
-
-
-
-
-
-Q: The planet Goob completes one revolution after every 2 weeks. How many hours will it take for it to complete half a revolution?
-
-Peano solution:
-
-
-Let a be the number of hours in a week [[var a]]. We have [[eq a = 168]]. 
-Let b be the number of hours in a revolution [[var b]]. We have [[eq b = a * 2]]. 
-Let c be the number of hours in half a revolution [[var c]]. We have [[eq c = b / 2]]. 
-The answer is the value of c [[answer c = 168]].
 
 
 
