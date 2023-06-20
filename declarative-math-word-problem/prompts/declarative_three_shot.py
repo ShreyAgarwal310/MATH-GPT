@@ -189,32 +189,6 @@ Because they earn a total of 75000, we have [[eq b + c = a]].
 Because the husband earns 15000 more than five times what his wife earns, we have [[eq c = 5 * b + 15000]].
 The answer is the value of b [[answer b]].
 
-Q: Two truck drivers leave a rest area on the interstate at the same time. One truck travels east and the other one travels west. The truck traveling west travels at 70 mph and the truck traveling east has an average speed of 60 mph. How many hours will they travel before they are 325 miles apart?
-
-Peano solution:
-
-Let a be the distance traveled by the truck heading west [[var a]].
-Let b be the distance traveled by the truck heading east [[var b]].
-Let c be the distance between the two trucks [[var c]]. [[eq c = 325]].
-Let d be the speed of the truck heading west [[var d]]. [[eq d = 70]].
-Let e be the speed of the truck heading east [[var e]]. [[eq e = 60]].
-Because the time traveled is the same for both trucks, we have [[eq a / d = b / e]].
-Because the total distance between the trucks will be the sum of the distance they have each traveled, we have [[eq a + b = c]].
-Let f be the time elapsed after the trucks left [[var f]].
-The time taken by the truck heading east will be the distance divided by the speed, so we have [[eq f = b / e]].
-The answer is the value of f [[answer f]].
-
-Q: 12.5% of what number is 20?
-
-Peano solution:
-
-Let a be the percentage in question [[var a]]. [[eq a = 12.5]].
-Let b be the final number we arrive at [[var b]]. [[eq b = 20]].
-Let c be the mystery number [[var c]].
-We have [[eq a / 100 * c = 20]].
-The answer is the value of c [[answer c]].
-
-Q: Mary had 5 apples. The next morning, she ate 2 apples. Then, in the afternoon, she bought as many apples as she had after eating those apples in the morning. How many apples did she end up with?
 
 Peano solution:
 
