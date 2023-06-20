@@ -165,9 +165,9 @@ When the ship is going downstream, the current is added onto the speed, so we ha
 When the ship is going upstream, the current is subtracted from the speed, so we have [[eq c * (d - e) = a]].
 The answer is the value of d [[answer d]].
 
+Q: Mary had 5 apples. The next morning, she ate 2 apples. Then, in the afternoon, she bought as many apples as she had after eating those apples in the morning. How many apples did she end up with?
 
 Peano solution:
-
 
 Let a be the number of apples Mary started with [[var a]]. We have [[eq a = 5]]. 
 Let b be how many apples she had in the morning after eating 2 apples [[var b]]. We have [[eq b = a - 2]]. 
@@ -175,7 +175,6 @@ Let c be the apples she bought in the afternoon [[var c]].
 Since she bought as many as she had after eating, we have [[eq c = b]]. 
 Let d be how many apples she ended up with [[var d]]. We have [[eq d = b + c]]. 
 The answer is the value of d [[answer d]]. 
-
 
 Q: Bob says to Alice: if you give me 3 apples and then take half of my apples away, then I will be left with 13 apples. How many apples do I have now?
 
