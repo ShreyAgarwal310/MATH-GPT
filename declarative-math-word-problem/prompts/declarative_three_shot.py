@@ -165,6 +165,54 @@ When the ship is going downstream, the current is added onto the speed, so we ha
 When the ship is going upstream, the current is subtracted from the speed, so we have [[eq c * (d - e) = a]].
 The answer is the value of d [[answer d]].
 
+Q: A private jet can fly 1095 miles in three hours with a tailwind but only 987 miles in three hours into a headwind. Find the speed of the jet in still air, in miles per hour.
+
+Peano solution:
+
+Let a be the distance the private jet can fly in three hours [[var a]]. We have [[eq a = 1095]].
+Let b be the distance the private jet can fly in three hours [[var b]]. We have [[eq b = 987]].
+Let c be the speed of the jet in still air [[var c]].
+Let d be the speed of the wind [[var d]].
+Let e be the time the jet was flying [[var e]]. We have [[eq e = 3]]
+Because the the jet flew 1095 miles with the tailwind, we have [[eq e * (c + d) = a]].
+Because the jet flew 987 miles with the headwind, we have [[eq e * (c - d) = b]].
+The answer is the value of c [[answer c]].
+
+Q: A married couple together earn $75,000. The husband earns $15,000 more than five times what his wife earns. What does the wife earn?
+
+Peano solution:
+
+Let a be the total amount of money the married couple earns [[var a]]. We have [[eq a = 75000]].
+Let b be the amount the wife earns [[var b]].
+Let c be the amount the husband earns [[var c]].
+Because they earn a total of 75000, we have [[eq b + c = a]].
+Because the husband earns 15000 more than five times what his wife earns, we have [[eq c = 5 * b + 15000]].
+The answer is the value of b [[answer b]].
+
+Q: Two truck drivers leave a rest area on the interstate at the same time. One truck travels east and the other one travels west. The truck traveling west travels at 70 mph and the truck traveling east has an average speed of 60 mph. How many hours will they travel before they are 325 miles apart?
+
+Peano solution:
+
+Let a be the distance traveled by the truck heading west [[var a]].
+Let b be the distance traveled by the truck heading east [[var b]].
+Let c be the distance between the two trucks [[var c]]. [[eq c = 325]].
+Let d be the speed of the truck heading west [[var d]]. [[eq d = 70]].
+Let e be the speed of the truck heading east [[var e]]. [[eq e = 60]].
+Because the time traveled is the same for both trucks, we have [[eq a / d = b / e]].
+Because the total distance between the trucks will be the sum of the distance they have each traveled, we have [[eq a + b = c]].
+Let f be the time elapsed after the trucks left [[var f]].
+The time taken by the truck heading east will be the distance divided by the speed, so we have [[eq f = b / e]].
+The answer is the value of f [[answer f]].
+
+Q: 12.5% of what number is 20?
+
+Peano solution:
+
+Let a be the percentage in question [[var a]]. [[eq a = 12.5]].
+Let b be the final number we arrive at [[var b]]. [[eq b = 20]].
+Let c be the mystery number [[var c]].
+We have [[eq a / 100 * c = 20]].
+The answer is the value of c [[answer c]].
 
 Q: Mary had 5 apples. The next morning, she ate 2 apples. Then, in the afternoon, she bought as many apples as she had after eating those apples in the morning. How many apples did she end up with?
 
