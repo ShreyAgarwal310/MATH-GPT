@@ -165,30 +165,6 @@ When the ship is going downstream, the current is added onto the speed, so we ha
 When the ship is going upstream, the current is subtracted from the speed, so we have [[eq c * (d - e) = a]].
 The answer is the value of d [[answer d]].
 
-Q: A private jet can fly 1095 miles in three hours with a tailwind but only 987 miles in three hours into a headwind. Find the speed of the jet in still air, in miles per hour.
-
-Peano solution:
-
-Let a be the distance the private jet can fly in three hours [[var a]]. We have [[eq a = 1095]].
-Let b be the distance the private jet can fly in three hours [[var b]]. We have [[eq b = 987]].
-Let c be the speed of the jet in still air [[var c]].
-Let d be the speed of the wind [[var d]].
-Let e be the time the jet was flying [[var e]]. We have [[eq e = 3]]
-Because the the jet flew 1095 miles with the tailwind, we have [[eq e * (c + d) = a]].
-Because the jet flew 987 miles with the headwind, we have [[eq e * (c - d) = b]].
-The answer is the value of c [[answer c]].
-
-Q: A married couple together earn $75,000. The husband earns $15,000 more than five times what his wife earns. What does the wife earn?
-
-Peano solution:
-
-Let a be the total amount of money the married couple earns [[var a]]. We have [[eq a = 75000]].
-Let b be the amount the wife earns [[var b]].
-Let c be the amount the husband earns [[var c]].
-Because they earn a total of 75000, we have [[eq b + c = a]].
-Because the husband earns 15000 more than five times what his wife earns, we have [[eq c = 5 * b + 15000]].
-The answer is the value of b [[answer b]].
-
 
 Peano solution:
 
