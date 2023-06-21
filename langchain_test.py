@@ -14,7 +14,6 @@ def get_file_contents(filename):
 api_key = get_file_contents('api_key.txt')
 
 # API configuration
-
 os.environ["OPENAI_API_KEY"] = api_key
 
 llm = OpenAI(model_name='text-davinci-003', temperature=0)
