@@ -3,7 +3,6 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 import os
 from langchain.llms import OpenAI
-from dotenv import load_dotenv
 
 def get_file_contents(filename):
     try:
@@ -14,16 +13,9 @@ def get_file_contents(filename):
 
 api_key = get_file_contents('api_key.txt')
 
-load_dotenv()
-
-print(api_key)
-
 # API configuration
-openai.api_key = os.getenv(api_key)
-print(openai.api_key)
 
-# for LangChain
-os.environ[api_key] = os.getenv(api_key)
+os.environ["OPENAI_API_KEY"] = api_key
 
 llm = OpenAI(model_name='text-davinci-003', temperature=0)
 
@@ -77,4 +69,5 @@ llm_out = llm(DATE_UNDERSTANDING_PROMPT.format(question=question))
 print(llm_out)
 
 exec(llm_out)
-# print(born)
+# says it'll throw an error but it won't
+print(born)
