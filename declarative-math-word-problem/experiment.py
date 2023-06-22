@@ -3,6 +3,8 @@ from prompts.declarative_three_shot import DECLARATIVE_THREE_SHOT_AND_PRINCIPLES
 import openai
 import time
 
+#results - 176/222 correct - 79.279% accuracy
+
 st = time.time()
 
 def get_file_contents(filename):
