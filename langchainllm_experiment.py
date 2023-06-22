@@ -1,7 +1,7 @@
 from langchain import OpenAI, LLMMathChain
 import os
 
-#results - 112/222 correct - 50.45% accuracy
+#results - 111/222 correct - 50% accuracy
 
 def get_file_contents(filename):
     try:
