@@ -1,9 +1,10 @@
 from utils import *
-from prompts.declarative_three_shot import DECLARATIVE_THREE_SHOT_AND_PRINCIPLES
+from prompts.declarative_eight_shot import DECLARATIVE_EIGHT_SHOT
 import openai
 import time
 
-#results - 176/222 correct - 79.279% accuracy
+#results - three-shot - 176/222 correct - 79.279% accuracy
+#results - eight-shot - 158/222 correct - 71.171% accuracy
 
 st = time.time()
 
@@ -25,8 +26,8 @@ with open('declarative-math-word-problem/algebra222.csv') as f:
 
 solver_answers = []
 
-for i in range(24, len(questions)):
-    eq_list = get_declarative_equations(model='text-davinci-003', question=questions[i], prompt=DECLARATIVE_THREE_SHOT_AND_PRINCIPLES, max_tokens=600, stop_token='\n\n\n', temperature=0)
+for i in range(0, 24):
+    eq_list = get_declarative_equations(model='text-davinci-003', question=questions[i], prompt=DECLARATIVE_EIGHT_SHOT, max_tokens=600, stop_token='\n\n\n', temperature=0)
     answer = get_final_using_sympy(eq_list)
     solver_answers.append(answer)
 
