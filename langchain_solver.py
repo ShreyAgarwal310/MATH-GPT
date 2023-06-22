@@ -15,9 +15,15 @@ os.environ["OPENAI_API_KEY"] = api_key
 llm = OpenAI(temperature = 0)
 llm_math = LLMMathChain.from_llm(llm, verbose = True)
 
-question = input("Enter a mathematical expression: ")
-solution = llm_math.run(question)
-print(solution)
+with open('declarative-math-word-problem/algebra222.csv') as f:
+    iata = [i.split(',')[0] for i in f.readlines()]
+
+print(iata)
+print(len(iata))
+
+# question = input("Enter a mathematical expression: ")
+# solution = llm_math.run(question)
+# print(solution)
 
 # def main():
 #     st.title("Complex Word Math Solver")
