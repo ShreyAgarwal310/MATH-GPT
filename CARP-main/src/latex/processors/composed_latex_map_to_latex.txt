@@ -1,7 +1,0 @@
-\foral
-\hspace
-\kern
-\lower
-\mkern- \IntDecimal mu
-\mspace{ \IntDecimal mu}
-\raise \FloatDecimal em
