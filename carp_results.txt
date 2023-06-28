@@ -1,6 +1,6 @@
 {
     "accuracy": "49.62089300758214%"
-},
+}
 {
     "content": "Given that $f(2)=5$ and $f^{-1}(x+4)=2f^{-1}(x)+1$ for all $x$, find $f^{-1}(17)$.",
     "steps": "Note that $f(2)=5$ implies $f^{-1}(5)=2$. Applying $f^{-1}(x+4)=2f^{-1}(x)+1$ repeatedly, we have: \\begin{align*}\nf^{-1}(5)&=2 \\\\\n\\Rightarrow \\quad f^{-1}(9)&=2f^{-1}(5)+1=5 \\\\\n\\Rightarrow \\quad f^{-1}(13)&=2f^{-1}(9)+1=11 \\\\\n\\Rightarrow \\quad f^{-1}(17)&=2f^{-1}(13)+1=23.\n\\end{align*}So $f^{-1}(17)=\\boxed{23}$.",
@@ -12,7 +12,7 @@
     ],
     "generated_ans": "48-16f^{-1}(4)",
     "score": 0
-},
+}
 {
     "content": "Rationalize the denominator of $\\displaystyle\\frac{33}{\\sqrt{33}}$.",
     "steps": "$\\dfrac{33}{\\sqrt{33}} = \\dfrac{33}{\\sqrt{33}} \\cdot \\dfrac{\\sqrt{33}}{\\sqrt{33}} = \\dfrac{33\\sqrt{33}}{33} = \\boxed{\\!\\sqrt{33}}$.",
