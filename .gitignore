@@ -4,3 +4,6 @@ api_key.txt
 __pycache__
 openai_api_key
 api_key.js
+node_modules
+/Users/shreyagarwal/Code/GitHub/MATH-GPT/package-lock.json
+package.json
