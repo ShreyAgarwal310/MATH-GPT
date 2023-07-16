@@ -3,3 +3,4 @@ api_key.txt
 .DS_Store
 __pycache__
 openai_api_key
+api_key.js

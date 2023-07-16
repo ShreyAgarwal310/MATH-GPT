@@ -1,0 +1,26 @@
+{
+  "name": "math-gpt",
+  "version": "1.0.0",
+  "description": "This project is for my high school internship through Young Nebraska Scientists through the University of Nebraska-Lincoln during the summer of 2023. The project is to improve ChatGPT's effectiveness at interpreting and solving mathematical word problems.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShreyAgarwal310/MATH-GPT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ShreyAgarwal310/MATH-GPT/issues"
+  },
+  "homepage": "https://github.com/ShreyAgarwal310/MATH-GPT#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "openai": "^3.3.0"
+  }
+}
