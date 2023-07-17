@@ -10,6 +10,10 @@ import openai
 import pal
 from pal.prompt import math_prompts
 from langchain import OpenAI, LLMMathChain
+from langchain.agents import load_tools
+from langchain.agents import initialize_agent
+from langchain.agents import AgentType
+from langchain.llms import OpenAI
 import os
 
 # access the api key from whatever file you have it in
@@ -43,6 +47,16 @@ def chat_with_gpt(prompt):
     return response.choices
 
 os.environ["OPENAI_API_KEY"] = api_key
+llm = OpenAI(temperature=0, model_name="text-davinci-003")
+tools = load_tools(["llm-math"], llm=llm)
+
+agent = initialize_agent(
+    tools,
+    llm,
+    agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+    verbose=True,
+    return_intermediate_steps=True,
+)
 
 # initialize the canvas
 canvas1 = tk.Canvas(root, width=750, height=750)
@@ -100,8 +114,16 @@ def use_langchain():
     llm = OpenAI(temperature = 0)
     llm_math = LLMMathChain.from_llm(llm, verbose = True)
     answer = llm_math.run(x1)
+    response = agent(
+        {
+            "input": x1
+        }
+    )
+    l = response["intermediate_steps"]
+    list = l[0]
     explanation_text.config(text="")
     answer_text.config(text=f"Langchain answer: '{answer[8:]}'.")
+    explanation_text.config(text=str(list[0]).split(", ", 2)[2][6:-2])
 
 # function to call for using PAL
 def use_pal():  
