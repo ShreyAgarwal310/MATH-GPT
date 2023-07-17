@@ -50,33 +50,33 @@ canvas1.pack()
 
 # title text
 title_text = tk.Label(canvas1, bg="white", fg="black", height=1, width=8, font=("Gill Sans MT", 36))
-title_text.place(x=275, y=20)
+title_text.place(relx=0.5, y=20, anchor="center")
 title_text.config(text='math-gpt')
 
 names_text = tk.Label(canvas1, bg="white", fg="black", height=1, width=53, font=("Gill Sans MT", 20))
-names_text.place(x=30, y=70)
+names_text.place(relx=0.5, y=70, anchor="center")
 names_text.config(text='Shrey Agarwal, Christina Xu, Hamid Bagheri, Lisong Xu')
 
 prompt_label = tk.Label(canvas1, bg="white", fg="black", height=1, width=50, font=("Gill Sans MT", 14))
-prompt_label.place(x=121.5, y=120)
+prompt_label.place(relx=0.5, y=120, anchor="center")
 prompt_label.config(text='Enter Prompt:')
 
 method_label = tk.Label(canvas1, bg="white", fg="black", height=1, width=50, font=("Gill Sans MT", 14))
-method_label.place(x=121.5, y=190)
+method_label.place(relx=0.5, y=190, anchor="center")
 method_label.config(text="Choose your method after you've entered your prompt:")
 
 answer_label = tk.Label(canvas1, bg="white", fg="black", height=1, width=50, font=("Gill Sans MT", 14))
-answer_label.place(x=121.5, y=290)
+answer_label.place(relx=0.5, y=290, anchor="center")
 answer_label.config(text="The answer will be displayed here:")
 
 explanation_label = tk.Label(canvas1, bg="white", fg="black", height=1, width=65, font=("Gill Sans MT", 14))
-explanation_label.place(x=50, y=390)
+explanation_label.place(relx=0.5, y=390, anchor="center")
 explanation_label.config(text="For the vanilla DaVinci and the Symbolic Solver, an explanation will be provided here:")
 
 # create the entry box
 entry1 = tk.Entry(width=50, font=("Arial 16"), bg="white", fg="black", justify='center')
 entry1.pack(padx=10, pady=10)
-canvas1.create_window(350, 160, window=entry1)
+entry1.place(relx=0.5, y = 150, anchor="center")
 
 # function to call for using vanilla davinci
 def use_vanilla_davinci():  
@@ -122,21 +122,21 @@ def use_symbolic_solver():
 
 # creating all the buttons and the answer text
 button1 = tk.Button(text='Vanilla DaVinci', command=use_vanilla_davinci)
-canvas1.create_window(200, 240, window=button1)
+canvas1.create_window(225, 240, window=button1)
 
 button2 = tk.Button(text='LangChain', command=use_langchain)
-canvas1.create_window(315, 240, window=button2)
+canvas1.create_window(345, 240, window=button2)
 
 button3 = tk.Button(text='PAL', command=use_pal)
-canvas1.create_window(400, 240, window=button3)
+canvas1.create_window(425, 240, window=button3)
 
 button3 = tk.Button(text='Symbolic Solver', command=use_symbolic_solver)
-canvas1.create_window(500, 240, window=button3)
+canvas1.create_window(525, 240, window=button3)
 
 answer_text = tk.Label(canvas1, bg="white", fg="black", height=1, width=65, font=("Gill Sans MT", 14))
-answer_text.place(x=50, y=340)
+answer_text.place(relx=0.5, y=340, anchor="center")
 
 explanation_text = tk.Label(canvas1, bg="white", fg="black", height=10, width=65, font=("Gill Sans MT", 14), wraplength=300, justify='center')
-explanation_text.place(x=50, y=440)
+explanation_text.place(relx=0.5, y=520, anchor="center")
 
 root.mainloop()
