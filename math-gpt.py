@@ -3,6 +3,9 @@ import sys
 sys.path.insert(0, '/Users/shreyagarwal/Code/GitHub/MATH-GPT/declarative-math-word-problem')
 sys.path.insert(0, '/Users/shreyagarwal/Code/GitHub/MATH-GPT/declarative-math-word-problem/prompts')
 sys.path.insert(0, '/Users/shreyagarwal/Code/GitHub/MATH-GPT/pal')
+sys.path.insert(0, '/Users/christinaxu/Dsocuments/GitHub/declarative-math-word-problem')
+sys.path.insert(0, '/Users/christinaxu/Documents/GitHub/declarative-math-word-problem/prompts')
+sys.path.insert(0, '/Users/christinaxu/Documents/GitHub/math-gpt/pal')
 import tkinter as tk
 from utils import *
 from declarative_three_shot import DECLARATIVE_THREE_SHOT_AND_PRINCIPLES
@@ -122,7 +125,7 @@ def use_langchain():
     l = response["intermediate_steps"]
     list = l[0]
     explanation_text.config(text="")
-    answer_text.config(text=f"Langchain answer: '{answer[8:]}'.")
+    answer_text.config(text=str(list[1]))
     explanation_text.config(text=str(list[0]).split(", ", 2)[2][6:-2])
 
 # function to call for using PAL
