@@ -25,6 +25,7 @@ openai.api_key = api_key
 
 root= tk.Tk()
 root.title('math-gpt')
+root.resizable(False, False)
 
 interface = pal.interface.ProgramInterface(
   model='text-davinci-003',
