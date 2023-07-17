@@ -2,7 +2,7 @@ api_key.txt
 .vscode
 .DS_Store
 __pycache__
-openai_api_key
+openai_api_key.txt
 api_key.js
 node_modules
 /Users/shreyagarwal/Code/GitHub/MATH-GPT/package-lock.json
