@@ -1,7 +1,17 @@
 import openai
 
+def get_file_contents(filename):
+    try:
+        with open(filename, 'r') as f:
+            return f.read().strip()
+    except FileNotFoundError:
+        print("'%s' file not found" % filename)
+
+api_key = get_file_contents('api_key.txt')
+openai.api_key = api_key
+
 # Set up your OpenAI API credentials
-openai.api_key = 'API_KEY'
+openai.api_key = api_key
 
 # Define the function to interact with ChatGPT
 
@@ -12,8 +22,6 @@ def chat_with_gpt(prompt):
         prompt=prompt,
         max_tokens=100,  # Adjust as needed to control the response length
         temperature=0.7,  # Adjust as needed to control the response randomness
-        n=3,  # Number of alternative completions to generate
-        stop=None,  # Stop generating after a specific token (optional)
     )
 
     return response.choices
