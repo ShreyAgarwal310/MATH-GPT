@@ -122,7 +122,7 @@ def use_langchain():
     l = response["intermediate_steps"]
     list = l[0]
     explanation_text.config(text="")
-    answer_text.config(text=f"Langchain answer: '{answer[8:]}'.")
+    answer_text.config(text=str(list[1]))
     explanation_text.config(text=str(list[0]).split(", ", 2)[2][6:-2])
 
 # function to call for using PAL
