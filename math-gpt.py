@@ -1,13 +1,12 @@
-
-import tkinter as tk
-import sys
 # you'll have to change the file paths to whatever they are on your computer - just these 3
+import sys
 sys.path.insert(0, '/Users/shreyagarwal/Code/GitHub/MATH-GPT/declarative-math-word-problem')
-from utils import *
 sys.path.insert(0, '/Users/shreyagarwal/Code/GitHub/MATH-GPT/declarative-math-word-problem/prompts')
+sys.path.insert(0, '/Users/shreyagarwal/Code/GitHub/MATH-GPT/pal')
+import tkinter as tk
+from utils import *
 from declarative_three_shot import DECLARATIVE_THREE_SHOT_AND_PRINCIPLES
 import openai
-sys.path.insert(0, '/Users/shreyagarwal/Code/GitHub/MATH-GPT/pal')
 import pal
 from pal.prompt import math_prompts
 from langchain import OpenAI, LLMMathChain
@@ -25,6 +24,7 @@ api_key = get_file_contents('api_key.txt')
 openai.api_key = api_key
 
 root= tk.Tk()
+root.title('math-gpt')
 
 interface = pal.interface.ProgramInterface(
   model='text-davinci-003',
@@ -33,25 +33,49 @@ interface = pal.interface.ProgramInterface(
 )
 
 def chat_with_gpt(prompt):
-    response = openai.Completion.create(
+    response=openai.Completion.create(
         engine='text-davinci-003',  # Choose the appropriate GPT model
         prompt=prompt,
         max_tokens=100,  # Adjust as needed to control the response length
         temperature=0.7,  # Adjust as needed to control the response randomness
     )
-
     return response.choices
 
 os.environ["OPENAI_API_KEY"] = api_key
 
 # initialize the canvas
-canvas1 = tk.Canvas(root, width=750, height=500)
+canvas1 = tk.Canvas(root, width=750, height=750)
 canvas1.pack()
+
+# title text
+title_text = tk.Label(canvas1, bg="white", fg="black", height=1, width=8, font=("Gill Sans MT", 36))
+title_text.place(x=275, y=20)
+title_text.config(text='math-gpt')
+
+names_text = tk.Label(canvas1, bg="white", fg="black", height=1, width=53, font=("Gill Sans MT", 20))
+names_text.place(x=30, y=70)
+names_text.config(text='Shrey Agarwal, Christina Xu, Hamid Bagheri, Lisong Xu')
+
+prompt_label = tk.Label(canvas1, bg="white", fg="black", height=1, width=50, font=("Gill Sans MT", 14))
+prompt_label.place(x=121.5, y=120)
+prompt_label.config(text='Enter Prompt:')
+
+method_label = tk.Label(canvas1, bg="white", fg="black", height=1, width=50, font=("Gill Sans MT", 14))
+method_label.place(x=121.5, y=190)
+method_label.config(text="Choose your method after you've entered your prompt:")
+
+answer_label = tk.Label(canvas1, bg="white", fg="black", height=1, width=50, font=("Gill Sans MT", 14))
+answer_label.place(x=121.5, y=290)
+answer_label.config(text="The answer will be displayed here:")
+
+explanation_label = tk.Label(canvas1, bg="white", fg="black", height=1, width=65, font=("Gill Sans MT", 14))
+explanation_label.place(x=50, y=390)
+explanation_label.config(text="For the vanilla DaVinci and the Symbolic Solver, an explanation will be provided here:")
 
 # create the entry box
 entry1 = tk.Entry(width=50, font=("Arial 16"), bg="white", fg="black", justify='center')
 entry1.pack(padx=10, pady=10)
-canvas1.create_window(350, 120, window=entry1)
+canvas1.create_window(350, 160, window=entry1)
 
 # function to call for using vanilla davinci
 def use_vanilla_davinci():  
@@ -97,21 +121,21 @@ def use_symbolic_solver():
 
 # creating all the buttons and the answer text
 button1 = tk.Button(text='Vanilla DaVinci', command=use_vanilla_davinci)
-canvas1.create_window(200, 180, window=button1)
+canvas1.create_window(200, 240, window=button1)
 
 button2 = tk.Button(text='LangChain', command=use_langchain)
-canvas1.create_window(315, 180, window=button2)
+canvas1.create_window(315, 240, window=button2)
 
 button3 = tk.Button(text='PAL', command=use_pal)
-canvas1.create_window(400, 180, window=button3)
+canvas1.create_window(400, 240, window=button3)
 
 button3 = tk.Button(text='Symbolic Solver', command=use_symbolic_solver)
-canvas1.create_window(500, 180, window=button3)
+canvas1.create_window(500, 240, window=button3)
 
 answer_text = tk.Label(canvas1, bg="white", fg="black", height=1, width=65, font=("Gill Sans MT", 14))
-answer_text.place(x=50, y=230)
+answer_text.place(x=50, y=340)
 
 explanation_text = tk.Label(canvas1, bg="white", fg="black", height=10, width=65, font=("Gill Sans MT", 14), wraplength=300, justify='center')
-explanation_text.place(x=50, y=270)
+explanation_text.place(x=50, y=440)
 
 root.mainloop()
