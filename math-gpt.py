@@ -114,9 +114,6 @@ def use_vanilla_davinci():
 # function to call for using langchain
 def use_langchain():  
     x1 = entry1.get()
-    llm = OpenAI(temperature = 0)
-    llm_math = LLMMathChain.from_llm(llm, verbose = True)
-    answer = llm_math.run(x1)
     response = agent(
         {
             "input": x1
@@ -124,9 +121,15 @@ def use_langchain():
     )
     l = response["intermediate_steps"]
     list = l[0]
+    answer = ""
+    explanation = ""
+    if len(l) >= 2:
+        answer = (str(l[len(l) - 1][1]))
+        for i in l:
+            explanation += str(i[0]).split(", ", 2)[2][6:-2]
     explanation_text.config(text="")
-    answer_text.config(text=str(list[1]))
-    explanation_text.config(text=str(list[0]).split(", ", 2)[2][6:-2])
+    answer_text.config(text=answer)
+    explanation_text.config(text=explanation)
 
 # function to call for using PAL
 def use_pal():  

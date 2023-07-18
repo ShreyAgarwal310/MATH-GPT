@@ -28,12 +28,32 @@ agent = initialize_agent(
 
 response = agent(
     {
-        "input": "What is 4+4?"
+        "input": "It takes Bongo two and a half hours to mow the front lawn. Find how many times he can mow the same lawn in 40 hours."
     }
 )
 
 l = response["intermediate_steps"]
+# print(l)
+# list = l[1]
+# print(str(list[1]))
+# print(str(list[0]).split(", ", 2)[2][6:-2])
+# print(len(list))
+
+# for i in list:
+#     print(i)
+
+if len(l) >= 2:
+    print(str(l[len(l) - 1][1]))
+    for i in l:
+        print(str(i[0]).split(", ", 2)[2][6:-2])
+    # first_list = l[0]
+    # list = l[len(l) - 1]
+    # print(str(first_list[0]).split(", ", 2)[2][6:-2])
+    # print(str(list[0]).split(", ", 2)[2][6:-2])
+    # .split(", ", 2)[2][6:-2]
 
 # question = input("Enter a mathematical expression: ")
- 
+
+# [(AgentAction(tool='Calculator', tool_input='2.5/1', log=' I need to figure out how long it takes Bongo to mow the lawn once.\nAction: Calculator\nAction Input: 2.5/1'), 'Answer: 2.5'), (AgentAction(tool='Calculator', tool_input='40/2.5', log=' I need to figure out how many times Bongo can mow the lawn in 40 hours.\nAction: Calculator\nAction Input: 40/2.5'), 'Answer: 16.0')]
+
 # llm_math.run(question)
