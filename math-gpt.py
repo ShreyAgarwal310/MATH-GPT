@@ -1,4 +1,3 @@
-# you'll have to change the file paths to whatever they are on your computer - just these 3
 import sys
 
 sys.path.insert(0, '/Users/shreyagarwal/Code/GitHub/MATH-GPT/declarative-math-word-problem')
@@ -14,7 +13,9 @@ from declarative_three_shot import DECLARATIVE_THREE_SHOT_AND_PRINCIPLES
 import openai
 import pal
 from pal.prompt import math_prompts
+from langchain.chains import PALChain
 from langchain import OpenAI, LLMMathChain
+from langchain.chains import PALChain
 from langchain.agents import load_tools
 from langchain.agents import initialize_agent
 from langchain.agents import AgentType
@@ -36,12 +37,11 @@ root= tk.Tk()
 root.title('math-gpt')
 root.resizable(False, False)
 
-interface = pal.interface.ProgramInterface(
-  model='text-davinci-003',
-  stop='\n\n\n', # stop generation str for Codex API
-  get_answer_expr='solution()' # python expression evaluated after generated code to obtain answer 
-)
+# initializing the pal model and interface
+MODEL = 'text-davinci-003' #@param {type:"string"}m
+interface = pal.interface.ProgramInterface(model=MODEL, get_answer_expr='solution()', verbose=True)
 
+# initializing the chat-gpt prompter for vanilla da-vinci
 def chat_with_gpt(prompt):
     response=openai.Completion.create(
         engine='text-davinci-003',  # Choose the appropriate GPT model
@@ -51,6 +51,7 @@ def chat_with_gpt(prompt):
     )
     return response.choices
 
+# initializing all of the langchain models and tools 
 os.environ["OPENAI_API_KEY"] = api_key
 llm = OpenAI(temperature=0, model_name="text-davinci-003")
 tools = load_tools(["llm-math"], llm=llm)
@@ -129,13 +130,19 @@ def use_langchain():
         }
     )
     l = response["intermediate_steps"]
-    list = l[0]
-    answer = ""
-    explanation = ""
+    # manipulating AgentAction namedTuple to find answer and explanation
     if len(l) >= 2:
+        answer = ""
+        explanation = ""
         answer = (str(l[len(l) - 1][1]))
         for i in l:
             explanation += str(i[0]).split(", ", 2)[2][6:-2]
+    else:
+        list = l[0]
+        answer = ""
+        explanation = ""
+        answer = str(list[1])
+        explanation = str(list[0]).split(", ", 2)[2][6:-2]
     explanation_text.config(text="")
     answer_text.config(text=answer)
     explanation_text.config(text=explanation)
@@ -145,8 +152,10 @@ def use_pal():
     x1 = entry1.get("1.0", 'end-1c')
     prompt = math_prompts.MATH_PROMPT.format(question=x1)
     answer = interface.run(prompt)
+    explanation = ""
     explanation_text.config(text="")
-    answer_text.config(text=f"PAL answer: '{answer}'.")
+    answer_text.config(text=answer)
+    explanation_text.config(text=explanation)
 
 # function to call for using the symbolic solver
 def use_symbolic_solver():  
