@@ -4,11 +4,7 @@ import sys
 sys.path.insert(0, '/Users/shreyagarwal/Code/GitHub/MATH-GPT/declarative-math-word-problem')
 sys.path.insert(0, '/Users/shreyagarwal/Code/GitHub/MATH-GPT/declarative-math-word-problem/prompts')
 sys.path.insert(0, '/Users/shreyagarwal/Code/GitHub/MATH-GPT/pal')
-<<<<<<< HEAD
 sys.path.insert(0, '/Users/christinaxu/Documents/GitHub/declarative-math-word-problem')
-=======
-sys.path.insert(0, '/Users/christinaxu/Dsocuments/GitHub/declarative-math-word-problem')
->>>>>>> 9040eea2a6d03da9e9f5e6a3efb9c0e494167f26
 sys.path.insert(0, '/Users/christinaxu/Documents/GitHub/declarative-math-word-problem/prompts')
 sys.path.insert(0, '/Users/christinaxu/Documents/GitHub/math-gpt/pal')
 import tkinter as tk
@@ -123,14 +119,10 @@ def use_vanilla_davinci():
 
 # function to call for using langchain
 def use_langchain():  
-<<<<<<< HEAD
     x1 = entry1.get("1.0", 'end-1c')
     llm = OpenAI(temperature = 0)
     llm_math = LLMMathChain.from_llm(llm, verbose = True)
     answer = llm_math.run(x1)
-=======
-    x1 = entry1.get()
->>>>>>> 9040eea2a6d03da9e9f5e6a3efb9c0e494167f26
     response = agent(
         {
             "input": x1
