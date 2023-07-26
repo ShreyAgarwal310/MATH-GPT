@@ -91,7 +91,7 @@ answer_label.config(text="The answer will be displayed here:")
 
 explanation_label = tk.Label(canvas1, bg="white", fg="black", height=1, width=100, font=("Times New Roman", 14))
 explanation_label.place(relx=0.5, y=340, anchor="center")
-explanation_label.config(text="For the Vanilla DaVinci and the Symbolic Solver, an explanation will be provided here:")
+explanation_label.config(text="For the Vanilla DaVinci, LangChain, and the Symbolic Solver, an explanation will be provided here:")
 
 # create the entry box
 entry1 = tk.Text(root, height = 3, font = ('Times New Roman', 16), bg = "white", fg = "black")

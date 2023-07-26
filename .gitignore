@@ -7,3 +7,6 @@ api_key.js
 node_modules
 /Users/shreyagarwal/Code/GitHub/MATH-GPT/package-lock.json
 package.json
+build
+dist
+math-gpt.spec

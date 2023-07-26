@@ -28,7 +28,7 @@ agent = initialize_agent(
 
 response = agent(
     {
-        "input": "It takes Bongo two and a half hours to mow the front lawn. Find how many times he can mow the same lawn in 40 hours."
+        "input": "Suppose that the value of x is −4. What is the value of the expression (3x − 5) + x?"
     }
 )
 
