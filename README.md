@@ -4,8 +4,12 @@ This project is for my high school internship through Young Nebraska Scientists 
 
 To install the necessary dependencies, clone the repository using: 
 
-git clone https://github.com/ShreyAgarwal310/math-gpt.
+`git clone https://github.com/ShreyAgarwal310/math-gpt.`
 
-Next, create a file named "api_key.txt" and copy and paste your OPENAI API Key into the file.
+Next, create a file named `api_key.txt` and copy and paste your OPENAI API Key into the file.
 
 Next, install all necessary packages: 
+
+`pip install math-gpt==0.1.0`
+
+Finally, to run the AI tester, run the `math-gpt.py` program.
